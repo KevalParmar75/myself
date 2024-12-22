@@ -65,3 +65,43 @@ document.addEventListener('DOMContentLoaded', () => {
     menu.classList.toggle('show');
   }
   
+
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    let name = document.getElementById('name').value;
+    let email = document.getElementById('email').value;
+    let phone = document.getElementById('phone').value;
+    let message = document.getElementById('message').value;
+
+    if (name === '' || email === '' || phone === '' || message === '') {
+      alert('All fields are required.');
+      return;
+    }
+    
+    if (!/^[a-zA-Z ]+$/.test(name)) {
+      alert('Name must contain only letters and spaces.');
+      return;
+    }
+
+    if (!/\S+@\S+\.\S+/.test(email)) {
+      alert('Please enter a valid email address.');
+      return;
+    }
+
+    if (!/^\d{10}$/.test(phone)) {
+      alert('Phone number must be 10 digits.');
+      return;
+    }
+
+    // If all validations pass, you can submit the form or do something else
+    alert('Form submitted successfully!');
+    // document.getElementById('contact-form').submit(); // Uncomment this line to actually submit the form
+  });
+
+
+function toggleMenu() {
+    const sidePanel = document.getElementById('sidePanel');
+    sidePanel.classList.toggle('open');
+}
+
