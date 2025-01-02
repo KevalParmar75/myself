@@ -12,7 +12,16 @@
 body {
   font-family: "Jersey 10", sans-serif;
   margin: 0%;
-  background-color:  #040D12;
+  /* background-color:  #040D12; */
+}
+
+#my-background {
+  z-index: 0;
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: max-content;
 }
 
 .navbar {
@@ -433,6 +442,10 @@ body {
 } */
 
 @media (max-width: 1079px) {
+  #my-background{
+    width: 100vh;
+  }
+
   .info {
     display: flex;
     flex-direction: column;
@@ -445,7 +458,8 @@ body {
     margin-bottom: 20px;
     padding-left: 10px;
   }
-  .heading{
+
+  .heading {
     font-size: 1rem;
   }
 }
@@ -574,7 +588,8 @@ body {
     padding-left: 10px;
     font-size: 1.5rem;
   }
-  .heading{
+
+  .heading {
     font-size: 1rem;
   }
 
@@ -582,6 +597,10 @@ body {
 
 /* resaponsive */
 @media (max-width: 768px) {
+#my-background{
+  width: 100vh;
+}
+
   .menu {
     display: none;
     flex-direction: column;
@@ -772,12 +791,17 @@ body {
     font-size: 1.3rem;
     padding-left: 10px;
   }
-  .heading{
+
+  .heading {
     font-size: 1rem;
   }
 }
 
 @media (max-width: 480px) {
+  #my-background{
+    width: 100vh;
+  }
+  
   .image {
     width: 200px;
     height: 200px;
@@ -887,14 +911,15 @@ body {
     font-size: 0.8rem;
   }
 
-  .pro{
+  .pro {
     font-size: 1.2rem;
   }
 
   #Projects {
     font-size: 1.5rem;
   }
-  .heading{
+
+  .heading {
     font-size: 1rem;
   }
 }
